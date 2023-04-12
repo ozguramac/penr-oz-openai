@@ -1,0 +1,4 @@
+apiVersion: v2
+name: penr-oz-openai
+version: 0.1.0
+description: A microservice that calls the OpenAI API with prompts

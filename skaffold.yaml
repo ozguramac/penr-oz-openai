@@ -1,0 +1,17 @@
+apiVersion: skaffold/v2beta20
+kind: Config
+metadata:
+  name: penr-oz-openai
+build:
+  artifacts:
+    - image: penr-oz-openai
+      context: .
+      docker:
+        dockerfile: Dockerfile
+deploy:
+  helm:
+    releases:
+      - name: openai-service
+        chartPath: .
+        values:
+          - values.yaml

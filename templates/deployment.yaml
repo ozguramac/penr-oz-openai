@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: penr-oz-openai
+  labels:
+    app: penr-oz-openai
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: penr-oz-openai
+  template:
+    metadata:
+      labels:
+        app: penr-oz-openai
+    spec:
+      containers:
+        - name: penr-oz-openai
+          image: penr-oz-openai:latest
+          imagePullPolicy: Never
+          env:
+            - name: OPENAI_API_KEY
+              value: {{ .Values.openai.apiKey }}
+          ports:
+            - containerPort: 5000
