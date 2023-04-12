@@ -32,4 +32,5 @@ For further reference, please consider the following sections:
 * [OpenAI](https://chat.openai.com/)
 * [Docker Overview](https://docs.docker.com/get-started/overview/)
 * [Minikube](https://minikube.sigs.k8s.io/docs/start/)
+* [Helm Overview](https://helm.sh/docs/intro/)
 * [Skaffold Overview](https://skaffold.dev/)
